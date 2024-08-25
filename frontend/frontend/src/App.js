@@ -12,7 +12,7 @@ function App() {
             const parsedData = JSON.parse(jsonInput);
             console.log("Submitting data:", parsedData);
 
-            const result = await axios.post('https://bajaj-scoi.onrender.com/bfhl', parsedData);
+            const result = await axios.post('https://bajajaj.onrender.com/bfhl', parsedData);
             console.log("Received response:", result.data);
             setResponse(result.data);
         } catch (error) {
@@ -44,7 +44,10 @@ function App() {
 
     return (
         <div className="app-container">
-            <h1 className="title">Bajaj Finserv Health Challenge</h1>
+            <header className="header">
+                <h1 className="title">Bajaj Finserv Health Challenge</h1>
+                <p className="user-info">Karan Kumar - Roll No: 21BCI0024</p>
+            </header>
             <div className="form-container">
                 <textarea
                     className="json-input"
